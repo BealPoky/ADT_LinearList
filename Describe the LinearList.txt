@@ -1,0 +1,59 @@
+ADT: Linear List
+
+    1)Feature:(1)Every List has a entry and exit
+            (2)every elements has a ancestor and a descendent,except for entry and exit.
+
+    2)Operation:
+
+ADT List{
+
+DataObject : D={a_i Belong to E| i Belong to N*}
+DataRelation : R1={<a(n),a(n-1)>|Both Belong to D, n Belong to N*}
+DataOperation:
+
+<1>InitList(&L)
+   OPRes: Construct a vacant LinearList
+<2>DestroyList(&L)
+   Initcondition: There exit a LinearList
+   OPRes:Destroy the List.
+<3>ClearList(&L)
+   Initcondition:There exit a List.
+   OPRes: Put the List a NULL List.
+<4>ListEmpty(L)
+   Initcondition:There exit a List.
+   OPRes: if NULL List Return TRUE,else FAUSE
+<5>ListLength(L)
+   Initcondition:There exit a List.
+   OPRes: Return the number of the list
+<6>GetElem(L,i, &e)
+   Initcondition:There exit a List, 1<= i <=Length(l)
+   OPRes: return the value(pointer) on the i th in the list.
+<7>LocateElem(L,e,compare())
+   Initcondition: There exit a List,func compare() can compare the elmes in the List.
+   OPres: return the adress of the elme in the list which is matched to the given e , if not fount ,return -1.
+<8>PriorElem(L,cur_e,&pre_e)
+   Initcondition: There exit a LinearList
+   OPRes:if cur_e belong to L and not the entry,then return the pre_e as its ancestor, else the operation failed ,pre_e is null.
+<9>NextElem(L,e,&next_e)
+   Initcondition: There exit a LinearList
+   OPRes: if cur_e belong to L and not the entry,then return the next_e as its decensent, else the operation failed.\
+<10>ListInsert(&l,i,e)
+   Initcondition: There exit a List, 1<= i <= Length(L)+1
+   OPRes: insert a new element e before the position i ,the length of the list plus one.
+<11>ListDelete(&L,i,&e)
+   Initcondition: There exit a List, 1<= i <= Length(L)+1
+   OPres: Delete the orlder of i in the list ,then return the e as the deleted elment.
+<12>ListTraverse(L,vist())
+   Initcondition:for each element ,calling the func visit(). visit() failed ,this operation failed.
+} ADT List
+
+    3)Form:
+
+
+    <1>sequenceList
+
+
+    <2>LinkList
+
+
+    <3>StaticLinkList
